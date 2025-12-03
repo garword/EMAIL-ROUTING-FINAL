@@ -35,3 +35,17 @@ model EmailRouting {
 
   @@map("email_routing")
 }
+
+model CloudflareConfig {
+  id              String   @id @default(cuid())
+  apiToken        String
+  accountId       String
+  d1Database      String
+  workerApi       String
+  kvStorage       String
+  destinationEmails String @default("[]") // JSON array of destination emails
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("cloudflare_config")
+}

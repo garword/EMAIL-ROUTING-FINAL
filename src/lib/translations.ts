@@ -1,0 +1,251 @@
+// Translations untuk Indonesian dan English
+export const translations = {
+  id: {
+    // Header
+    "Email Routing Manager": "Manajer Email Routing",
+    "Kelola alamat email Cloudflare Anda dengan mudah": "Kelola alamat email Cloudflare Anda dengan mudah",
+    "API Config": "Konfigurasi API",
+
+    // Login
+    "Email Routing Manager Login": "Login Manajer Email Routing",
+    "Silakan masuk untuk melanjutkan": "Silakan masuk untuk melanjutkan",
+    "Username": "Username",
+    "Masukkan username": "Masukkan username",
+    "Password": "Password",
+    "Masukkan password": "Masukkan password",
+    "Masuk": "Masuk",
+    "Loading...": "Memproses...",
+    "Demo Credentials:": "Kredensial Demo:",
+    "Username: windaa": "Username: windaa",
+    "Password: cantik": "Password: cantik",
+    "Username atau password salah": "Username atau password salah",
+
+    // Main Page
+    "Buat Email Routing Baru": "Buat Email Routing Baru",
+    "Buat alamat email baru yang diteruskan ke email tujuan Anda": "Buat alamat email baru yang diteruskan ke email tujuan Anda",
+    "Domain": "Domain",
+    "Pilih domain...": "Pilih domain...",
+    "Mode Pembuatan Email": "Mode Pembuatan Email",
+    "Otomatis (Nama Indonesia + Random)": "Otomatis (Nama Indonesia + Random)",
+    "Manual (Custom Alias)": "Manual (Custom Alias)",
+    "Preview Nama Otomatis": "Preview Nama Otomatis",
+    "Alias Email": "Alias Email",
+    "contoh: support": "contoh: support",
+    "Email Tujuan": "Email Tujuan",
+    "Pilih email tujuan...": "Pilih email tujuan...",
+    "📝 Masukkan Email Custom": "📝 Masukkan Email Custom",
+    "email@example.com": "email@example.com",
+    "Quick Actions": "Aksi Cepat",
+    "Refresh Domains": "Refresh Domains",
+    "Generate Name": "Generate Nama",
+    "Buat Email Routing": "Buat Email Routing",
+    "Memproses...": "Memproses...",
+    
+    "Daftar Email Routing": "Daftar Email Routing",
+    "Kelola semua alamat email routing yang telah dibuat": "Kelola semua alamat email routing yang telah dibuat",
+    "Belum ada email routing yang dibuat": "Belum ada email routing yang dibuat",
+    "Active": "Aktif",
+    "Inactive": "Tidak Aktif",
+
+    "Statistik": "Statistik",
+    "Total Email": "Total Email",
+    "Domain Aktif": "Domain Aktif",
+    "Email Aktif": "Email Aktif",
+
+    "Keamanan": "Keamanan",
+    "API Token disimpan dengan aman": "API Token disimpan dengan aman",
+    "Tidak ada data yang di-hardcode": "Tidak ada data yang di-hardcode",
+    "Koneksi HTTPS terenkripsi": "Koneksi HTTPS terenkripsi",
+    "Validasi input otomatis": "Validasi input otomatis",
+
+    "⚠️ Cloudflare API belum dikonfigurasi!": "⚠️ Cloudflare API belum dikonfigurasi!",
+    "Silakan klik tombol": "Silakan klik tombol",
+    "di header untuk setup API key terlebih dahulu.": "di header untuk setup API key terlebih dahulu.",
+
+    // Config Dashboard
+    "Cloudflare Config": "Konfigurasi Cloudflare",
+    "Kelola konfigurasi API Cloudflare Anda": "Kelola konfigurasi API Cloudflare Anda",
+    "Status": "Status",
+    "Konfigurasi Tersimpan": "Konfigurasi Tersimpan",
+    "Belum Ada Konfigurasi": "Belum Ada Konfigurasi",
+    "Edit Konfigurasi": "Edit Konfigurasi",
+    "Setup Sekarang": "Setup Sekarang",
+    "Edit Konfigurasi Cloudflare": "Edit Konfigurasi Cloudflare",
+    "Setup Konfigurasi Cloudflare": "Setup Konfigurasi Cloudflare",
+    "Masukkan semua API key yang diperlukan. Data akan disimpan secara aman.": "Masukkan semua API key yang diperlukan. Data akan disimpan secara aman.",
+    
+    "Cloudflare API Token": "Cloudflare API Token",
+    "Token API untuk autentikasi": "Token API untuk autentikasi",
+    "Account ID": "Account ID",
+    "ID akun Cloudflare Anda": "ID akun Cloudflare Anda",
+    "D1 Database ID": "D1 Database ID",
+    "ID database D1 Cloudflare": "ID database D1 Cloudflare",
+    "Worker API Token": "Worker API Token",
+    "Token untuk Cloudflare Worker": "Token untuk Cloudflare Worker",
+    "KV Storage ID": "KV Storage ID",
+    "ID KV Storage Cloudflare": "ID KV Storage Cloudflare",
+
+    "Daftar Email Tujuan": "Daftar Email Tujuan",
+    "Kelola alamat email tujuan yang akan menerima email": "Kelola alamat email tujuan yang akan menerima email",
+    "Email": "Email",
+    "Masukkan email tujuan": "Masukkan email tujuan",
+    "Tambah Email": "Tambah Email",
+    "Tambah": "Tambah",
+    "Add": "Add",
+    "Hapus": "Hapus",
+    "Delete": "Hapus",
+    "Tidak ada email tujuan": "Tidak ada email tujuan",
+    "Email ditambahkan": "Email ditambahkan",
+    "Email dihapus": "Email dihapus",
+    "Format email tidak valid": "Format email tidak valid",
+    "Email sudah ditambahkan": "Email sudah ditambahkan",
+    "disalin ke clipboard": "disalin ke clipboard",
+
+    "Batal": "Batal",
+    "Simpan Konfigurasi": "Simpan Konfigurasi",
+    "Tersimpan": "Tersimpan",
+
+    // Error Messages
+    "Semua field harus diisi": "Semua field harus diisi",
+    "Konfigurasi berhasil disimpan!": "Konfigurasi berhasil disimpan!",
+    "Gagal menyimpan konfigurasi": "Gagal menyimpan konfigurasi",
+    "Pilih domain dan masukkan email tujuan": "Pilih domain dan masukkan email tujuan",
+    "Masukkan alias email": "Masukkan alias email",
+    "Email routing berhasil dibuat!": "Email routing berhasil dibuat!",
+    "Gagal membuat email routing": "Gagal membuat email routing",
+
+    // Sidebar
+    "API Token disalin ke clipboard": "API Token disalin ke clipboard",
+    "Account ID disalin ke clipboard": "Account ID disalin ke clipboard",
+    "D1 Database disalin ke clipboard": "D1 Database disalin ke clipboard",
+    "Worker API disalin ke clipboard": "Worker API disalin ke clipboard",
+    "KV Storage disalin ke clipboard": "KV Storage disalin ke clipboard",
+  },
+  en: {
+    // Header
+    "Email Routing Manager": "Email Routing Manager",
+    "Kelola alamat email Cloudflare Anda dengan mudah": "Manage your Cloudflare email addresses easily",
+    "API Config": "API Config",
+
+    // Login
+    "Email Routing Manager Login": "Email Routing Manager Login",
+    "Silakan masuk untuk melanjutkan": "Please sign in to continue",
+    "Username": "Username",
+    "Masukkan username": "Enter username",
+    "Password": "Password",
+    "Masukkan password": "Enter password",
+    "Masuk": "Sign In",
+    "Loading...": "Loading...",
+    "Demo Credentials:": "Demo Credentials:",
+    "Username: windaa": "Username: windaa",
+    "Password: cantik": "Password: cantik",
+    "Username atau password salah": "Username or password is incorrect",
+
+    // Main Page
+    "Buat Email Routing Baru": "Create New Email Routing",
+    "Buat alamat email baru yang diteruskan ke email tujuan Anda": "Create a new email address that forwards to your destination email",
+    "Domain": "Domain",
+    "Pilih domain...": "Select domain...",
+    "Mode Pembuatan Email": "Email Creation Mode",
+    "Otomatis (Nama Indonesia + Random)": "Auto (Indonesian Name + Random)",
+    "Manual (Custom Alias)": "Manual (Custom Alias)",
+    "Preview Nama Otomatis": "Auto Name Preview",
+    "Alias Email": "Email Alias",
+    "contoh: support": "example: support",
+    "Email Tujuan": "Destination Email",
+    "Pilih email tujuan...": "Select destination email...",
+    "📝 Masukkan Email Custom": "📝 Enter Custom Email",
+    "email@example.com": "email@example.com",
+    "Quick Actions": "Quick Actions",
+    "Refresh Domains": "Refresh Domains",
+    "Generate Name": "Generate Name",
+    "Buat Email Routing": "Create Email Routing",
+    "Memproses...": "Processing...",
+    
+    "Daftar Email Routing": "Email Routing List",
+    "Kelola semua alamat email routing yang telah dibuat": "Manage all created email routing addresses",
+    "Belum ada email routing yang dibuat": "No email routing created yet",
+    "Active": "Active",
+    "Inactive": "Inactive",
+
+    "Statistik": "Statistics",
+    "Total Email": "Total Email",
+    "Domain Aktif": "Active Domains",
+    "Email Aktif": "Active Emails",
+
+    "Keamanan": "Security",
+    "API Token disimpan dengan aman": "API tokens are stored securely",
+    "Tidak ada data yang di-hardcode": "No hardcoded data",
+    "Koneksi HTTPS terenkripsi": "HTTPS encrypted connection",
+    "Validasi input otomatis": "Automatic input validation",
+
+    "⚠️ Cloudflare API belum dikonfigurasi!": "⚠️ Cloudflare API not configured!",
+    "Silakan klik tombol": "Please click the",
+    "di header untuk setup API key terlebih dahulu.": "button in the header to setup API keys first.",
+
+    // Config Dashboard
+    "Cloudflare Config": "Cloudflare Config",
+    "Kelola konfigurasi API Cloudflare Anda": "Manage your Cloudflare API configuration",
+    "Status": "Status",
+    "Konfigurasi Tersimpan": "Configuration Saved",
+    "Belum Ada Konfigurasi": "No Configuration",
+    "Edit Konfigurasi": "Edit Configuration",
+    "Setup Sekarang": "Setup Now",
+    "Edit Konfigurasi Cloudflare": "Edit Cloudflare Configuration",
+    "Setup Konfigurasi Cloudflare": "Setup Cloudflare Configuration",
+    "Masukkan semua API key yang diperlukan. Data akan disimpan secara aman.": "Enter all required API keys. Data will be stored securely.",
+    
+    "Cloudflare API Token": "Cloudflare API Token",
+    "Token API untuk autentikasi": "API token for authentication",
+    "Account ID": "Account ID",
+    "ID akun Cloudflare Anda": "Your Cloudflare account ID",
+    "D1 Database ID": "D1 Database ID",
+    "ID database D1 Cloudflare": "Cloudflare D1 database ID",
+    "Worker API Token": "Worker API Token",
+    "Token untuk Cloudflare Worker": "Token for Cloudflare Worker",
+    "KV Storage ID": "KV Storage ID",
+    "ID KV Storage Cloudflare": "Cloudflare KV Storage ID",
+
+    "Daftar Email Tujuan": "Destination Email List",
+    "Kelola alamat email tujuan yang akan menerima email": "Manage destination email addresses that will receive emails",
+    "Email": "Email",
+    "Masukkan email tujuan": "Enter destination email",
+    "Tambah Email": "Add Email",
+    "Tambah": "Add",
+    "Hapus": "Delete",
+    "Delete": "Delete",
+    "Tidak ada email tujuan": "No destination emails",
+
+    "Batal": "Cancel",
+    "Simpan Konfigurasi": "Save Configuration",
+    "Tersimpan": "Saved",
+
+    // Error Messages
+    "Semua field harus diisi": "All fields must be filled",
+    "Konfigurasi berhasil disimpan!": "Configuration saved successfully!",
+    "Gagal menyimpan konfigurasi": "Failed to save configuration",
+    "Pilih domain dan masukkan email tujuan": "Select a domain and enter destination email",
+    "Masukkan alias email": "Enter email alias",
+    "Email routing berhasil dibuat!": "Email routing created successfully!",
+    "Gagal membuat email routing": "Failed to create email routing",
+    "Email ditambahkan": "Email added",
+    "Email dihapus": "Email deleted",
+    "Format email tidak valid": "Invalid email format",
+    "Email sudah ditambahkan": "Email already added",
+    "disalin ke clipboard": "copied to clipboard",
+
+    // Sidebar
+    "API Token disalin ke clipboard": "API Token copied to clipboard",
+    "Account ID disalin ke clipboard": "Account ID copied to clipboard",
+    "D1 Database disalin ke clipboard": "D1 Database copied to clipboard",
+    "Worker API disalin ke clipboard": "Worker API copied to clipboard",
+    "KV Storage disalin ke clipboard": "KV Storage copied to clipboard",
+  }
+};
+
+export type Language = "id" | "en";
+
+export function t(key: string, lang: Language): string {
+  const translation = translations[lang][key as keyof typeof translations[Language]];
+  return translation || key;
+}

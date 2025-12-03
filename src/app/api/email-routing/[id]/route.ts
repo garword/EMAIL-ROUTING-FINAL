@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-
-const CLOUDFLARE_API_TOKEN = "S8Use9zdidyGF7lg2FFbUU-mbfSMn2Qb9dHaX9ok";
+import { getCloudflareConfig } from '@/lib/cloudflare-api';
 
 // DELETE - Delete email routing
 export async function DELETE(
@@ -9,6 +8,15 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
+    const config = await getCloudflareConfig();
+
+    if (!config) {
+      return NextResponse.json({
+        success: false,
+        error: "Cloudflare API config belum dikonfigurasi."
+      }, { status: 400 });
+    }
+
     const { id } = params;
     const body = await request.json();
     const { ruleId } = body;
@@ -38,7 +46,7 @@ export async function DELETE(
       {
         method: 'DELETE',
         headers: {
-          'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
+          'Authorization': `Bearer ${config.apiToken}`,
           'Content-Type': 'application/json',
         },
       }

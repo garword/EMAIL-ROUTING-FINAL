@@ -1,16 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const CLOUDFLARE_API_TOKEN = "S8Use9zdidyGF7lg2FFbUU-mbfSMn2Qb9dHaX9ok";
-const CLOUDFLARE_ACCOUNT_ID = "6543986839c715461d19a855c7afa9d7";
+import { getCloudflareConfig } from '@/lib/cloudflare-api';
 
 export async function GET() {
   try {
+    const config = await getCloudflareConfig();
+
+    if (!config) {
+      return NextResponse.json({
+        success: false,
+        error: "Cloudflare API config belum dikonfigurasi. Silakan setup di Dashboard Config terlebih dahulu.",
+        zones: []
+      }, { status: 400 });
+    }
+
     const response = await fetch(
       `https://api.cloudflare.com/client/v4/zones?status=active&per_page=50`,
       {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
+          'Authorization': `Bearer ${config.apiToken}`,
           'Content-Type': 'application/json',
         },
       }
@@ -30,7 +38,8 @@ export async function GET() {
     console.error('Error fetching zones:', error);
     return NextResponse.json({
       success: false,
-      error: error instanceof Error ? error.message : 'Unknown error'
+      error: error instanceof Error ? error.message : 'Unknown error',
+      zones: []
     }, { status: 500 });
   }
 }

@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-
-const CLOUDFLARE_API_TOKEN = "S8Use9zdidyGF7lg2FFbUU-mbfSMn2Qb9dHaX9ok";
+import { getCloudflareConfig } from '@/lib/cloudflare-api';
 
 // GET - List all email routing
 export async function GET() {
@@ -28,6 +27,15 @@ export async function GET() {
 // POST - Create new email routing
 export async function POST(request: NextRequest) {
   try {
+    const config = await getCloudflareConfig();
+
+    if (!config) {
+      return NextResponse.json({
+        success: false,
+        error: "Cloudflare API config belum dikonfigurasi. Silakan setup di Dashboard Config terlebih dahulu."
+      }, { status: 400 });
+    }
+
     const body = await request.json();
     const { zoneId, aliasPart, destinationEmail } = body;
 
@@ -44,7 +52,7 @@ export async function POST(request: NextRequest) {
       {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
+          'Authorization': `Bearer ${config.apiToken}`,
           'Content-Type': 'application/json',
         },
       }
@@ -64,7 +72,7 @@ export async function POST(request: NextRequest) {
       {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
+          'Authorization': `Bearer ${config.apiToken}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
