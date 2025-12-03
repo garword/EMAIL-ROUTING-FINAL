@@ -16,18 +16,18 @@ export function LanguageSelector({ currentLanguage, onLanguageChange }: Language
       <Button
         variant={currentLanguage === "id" ? "default" : "ghost"}
         size="sm"
-        className="h-8"
+        className="h-8 px-2"
         onClick={() => onLanguageChange("id")}
       >
-        🇮🇩 Bahasa
+        ID
       </Button>
       <Button
         variant={currentLanguage === "en" ? "default" : "ghost"}
         size="sm"
-        className="h-8"
+        className="h-8 px-2"
         onClick={() => onLanguageChange("en")}
       >
-        🇬🇧 English
+        EN
       </Button>
     </div>
   );
