@@ -14,7 +14,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 import { LanguageSelector } from "@/components/language-selector";
 import { Language, t } from "@/lib/translations";
-import { API_BASE_URL } from "@/lib/constants";
 import { 
   Mail, 
   Globe, 
@@ -107,7 +106,7 @@ export default function EmailRoutingManager() {
 
   const checkConfig = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/cloudflare/config`);
+      const response = await fetch('/api/cloudflare/config');
       const data = await response.json();
       
       if (data.success && data.config && data.config._full) {
@@ -130,7 +129,7 @@ export default function EmailRoutingManager() {
   const loadZones = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${API_BASE_URL}/api/cloudflare/zones`);
+      const response = await fetch('/api/cloudflare/zones');
       const data = await response.json();
       
       if (data.success) {
@@ -156,7 +155,7 @@ export default function EmailRoutingManager() {
 
   const loadEmailList = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/email-routing`);
+      const response = await fetch('/api/email-routing');
       const data = await response.json();
       
       if (data.success) {
@@ -169,7 +168,7 @@ export default function EmailRoutingManager() {
 
   const loadDestinationEmails = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/cloudflare/config`);
+      const response = await fetch('/api/cloudflare/config');
       const data = await response.json();
       
       if (data.success && data.config && data.config.destinationEmails) {
@@ -207,7 +206,7 @@ export default function EmailRoutingManager() {
 
     try {
       setIsLoading(true);
-      const response = await fetch(`${API_BASE_URL}/api/email-routing`, {
+      const response = await fetch('/api/email-routing', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -241,7 +240,7 @@ export default function EmailRoutingManager() {
   const deleteEmailRouting = async (id: string, ruleId: string) => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${API_BASE_URL}/api/email-routing/${id}`, {
+      const response = await fetch(`/api/email-routing/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

@@ -9,7 +9,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { LanguageSelector } from "@/components/language-selector";
-import { API_BASE_URL } from "@/lib/constants";
 import {
   Dialog,
   DialogContent,
@@ -88,7 +87,7 @@ export default function CloudflareConfigDashboard() {
   const loadConfig = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_BASE_URL}/api/cloudflare/config`);
+      const response = await fetch("/api/cloudflare/config");
       const data = await response.json();
 
       if (data.success && data.config && data.config._full) {
@@ -124,7 +123,7 @@ export default function CloudflareConfigDashboard() {
 
     try {
       setSaving(true);
-      const response = await fetch(`${API_BASE_URL}/api/cloudflare/config`, {
+      const response = await fetch("/api/cloudflare/config", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -205,7 +204,7 @@ export default function CloudflareConfigDashboard() {
   const openEditDialog = async () => {
     // Reload config untuk memastikan data terbaru
     try {
-      const response = await fetch(`${API_BASE_URL}/api/cloudflare/config`);
+      const response = await fetch("/api/cloudflare/config");
       const data = await response.json();
       
       if (data.success && data.config && data.config._full) {
