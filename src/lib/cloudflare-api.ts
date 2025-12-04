@@ -1,10 +1,8 @@
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { db } from "@/lib/db";
 
 export async function getCloudflareConfig() {
   try {
-    const config = await prisma.cloudflareConfig.findFirst();
+    const config = await db.cloudflareConfig.findFirst();
     return config;
   } catch (error) {
     console.error("Error fetching Cloudflare config:", error);

@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { db } from "@/lib/db";
 
 // GET - Ambil konfigurasi API
 export async function GET() {
   try {
-    const config = await prisma.cloudflareConfig.findFirst();
+    const config = await db.cloudflareConfig.findFirst();
     
     if (!config) {
       return NextResponse.json({
@@ -63,12 +61,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Cek apakah sudah ada konfigurasi
-    const existingConfig = await prisma.cloudflareConfig.findFirst();
+    const existingConfig = await db.cloudflareConfig.findFirst();
 
     let config;
     if (existingConfig) {
       // Update
-      config = await prisma.cloudflareConfig.update({
+      config = await db.cloudflareConfig.update({
         where: { id: existingConfig.id },
         data: {
           apiToken,
@@ -81,7 +79,7 @@ export async function POST(request: NextRequest) {
       });
     } else {
       // Create
-      config = await prisma.cloudflareConfig.create({
+      config = await db.cloudflareConfig.create({
         data: {
           apiToken,
           accountId,
