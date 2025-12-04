@@ -54,8 +54,8 @@ Sebelum menggunakan aplikasi ini, pastikan:
 
 ### 1. Clone dan Install Dependencies
 ```bash
-git clone <repository-url>
-cd email-routing-manager
+git clone https://github.com/garword/emailkuy.git
+cd emailkuy
 npm install
 ```
 
@@ -247,4 +247,4 @@ Jika mengalami masalah:
 
 ---
 
-**Email Routing Manager** - Solusi modern untuk mengelola email Cloudflare dengan mudah dan aman.
+**EmailKuy** - Solusi modern untuk mengelola email Cloudflare dengan mudah dan aman.
